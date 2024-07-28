@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule Engine UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Rule Engine UI</h1>
+    
+    <section>
+        <h2>Create Rule</h2>
+        <form id="createRuleForm">
+            <label for="ruleName">Rule Name:</label>
+            <input type="text" id="ruleName" required>
+            <br>
+            <label for="ruleString">Rule String:</label>
+            <textarea id="ruleString" required></textarea>
+            <br>
+            <button type="submit">Create Rule</button>
+        </form>
+        <p id="createRuleResponse"></p>
+    </section>
 
+    <section>
+        <h2>Get Rules</h2>
+        <button id="getRulesButton">Get Rules</button>
+        <div id="rulesList"></div>
+    </section>
+
+    <section>
+        <h2>Evaluate Rules</h2>
+        <form id="evaluateForm">
+            <label for="ruleStrings">Rule Strings (comma separated):</label>
+            <input type="text" id="ruleStrings" required>
+            <br>
+            <label for="attributes">Attributes (JSON format):</label>
+            <textarea id="attributes" required></textarea>
+            <br>
+            <button type="submit">Evaluate</button>
+        </form>
+        <p id="evaluateResponse"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
